@@ -1,16 +1,40 @@
-# app
+# BloodConnect
 
-A new Flutter project.
+A Flutter + Firebase mobile app that connects blood donors with people who need blood.
 
-## Getting Started
+> 📸 Screenshots: TODO
 
-This project is a starting point for a Flutter application.
+## Features
 
-A few resources to get you started if this is your first Flutter project:
+- Email sign-up and login with Firebase Auth. Users register with their blood group.
+- Create blood requests (blood group, hospital, city) stored in Cloud Firestore
+- Home feed of open requests, with a detail screen for each one
+- Call the requester directly from the app (`tel:` via `url_launcher`)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Tech stack
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Flutter · Dart · Firebase Auth · Cloud Firestore · Firebase Messaging · Provider · Shared Preferences
+
+## Getting started
+
+```bash
+flutter pub get
+flutter run
+```
+
+To use your own Firebase project, run `flutterfire configure` to regenerate `lib/firebase_options.dart` and `android/app/google-services.json`.
+
+## Project structure
+
+```
+lib/
+  main.dart
+  models/     user, blood request
+  screens/    splash, login, register, home, create request, request detail
+  services/   auth_service, firestore_service
+  utils/      constants
+```
+
+## Author
+
+**Mati ul Rehman**: [github.com/Matiz009](https://github.com/Matiz009)
